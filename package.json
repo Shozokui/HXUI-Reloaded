@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Shozokui/HXUI-Reloaded/issues"
   },
-  "homepage": "https://github.com/Shozokui/HXUI-Reloaded#readme"
+  "homepage": "https://github.com/Shozokui/HXUI-Reloaded#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
