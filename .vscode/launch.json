@@ -12,8 +12,7 @@
       "stopOnEntry": false,
       "args": [],
       "cwd": "${workspaceRoot}",
-      "runtimeArgs": ["--nolazy"],
-      "console": "internalConsole"
+      "runtimeArgs": ["--nolazy"]
     }
   ]
 }

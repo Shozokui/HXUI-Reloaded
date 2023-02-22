@@ -1,0 +1,21 @@
+<svg viewBox="0 0 78 14">
+  <defs>
+    <linearGradient id="white-text" x1="0" x2="0" y1="0" y2="100%" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e7ebef" offset="0%" />
+      <stop stop-color="#C5CDE0" offset="100%" />
+    </linearGradient>
+  </defs>
+  <style>
+    .text {
+      font-size: 12px;
+      font-style: 'italic'
+      font-weight: 900;
+      line-height: 14.06px;
+      letter-spacing: 0.01em;
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+  <text class="text" fill="url(#white-text)">
+    Shozokui
+  </text>
+</svg>

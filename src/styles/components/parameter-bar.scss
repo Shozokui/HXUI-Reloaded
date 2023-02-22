@@ -1,0 +1,32 @@
+.parameter-bar {
+  margin: 0 6px;
+  display: inline-block;
+  position: relative;
+
+  .label {
+    top: -2px;
+    left: 14px;
+    z-index: 1;
+    position: absolute;
+  }
+
+  .number {
+    right: 16px;
+    bottom: -10px;
+    z-index: 1;
+    position: absolute;
+  }
+
+  .bar-stub {
+    top: 7px;
+    left: 2px;
+    z-index: 1;
+    position: absolute;
+
+    &.right {
+      left: auto;
+      right: 2px;
+      transform: scaleX(-1);
+    }
+  }
+}

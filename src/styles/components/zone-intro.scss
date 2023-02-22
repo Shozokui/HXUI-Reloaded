@@ -1,0 +1,12 @@
+#zone-intro {
+  top: 20%;
+  left: 50%;
+  position: fixed;
+  transform: translateX(-50%);
+  transform-origin: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

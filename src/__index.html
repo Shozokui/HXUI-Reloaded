@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="//cdn.jsdelivr.net/snap.svg/0.1.0/snap.svg-min.js"></script>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        var s = Snap("#svg");
+        s.attr({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+
+        var gradient = s.gradient("l(0,0,0,1)#e7ebef-#c5cde0");
+        var blue_gradient = s.gradient("l(0,0,0,1)#7AC6EF-#3697CD");
+        var white_gradient = s.gradient("l(0,0,0,1)#FFF8EB-#E4DED0");
+
+        var mid_range_gradient = s.gradient("l(0,0,0,1)#C08C3D-#ECC769");
+        var low_range_gradient = s.gradient("l(0,0,0,1)#C0553D-#ECA069");
+        var critical_gradient = s.gradient("l(0,0,0,1)#E06A6A-#FF9A9A");
+        // var gradient_type1 = s.gradient("l(0,0,1,1)#000-#f00-#fff");
+
+        var text = s.text(0, 135, "Shozokui");
+        text.attr({
+          fill: gradient,
+          stroke: "#000",
+          "stroke-width": "0.2rem",
+          "font-size": "6rem",
+          "line-height": 14,
+          "letter-spacing": -5,
+          "font-family": "Roboto, sans-serif",
+          "font-weight": 900,
+          "font-style": "italic",
+        });
+
+        var text2 = s.text(178, 225, "3,000");
+        text2.attr({
+          fill: blue_gradient,
+          stroke: "#000",
+          "stroke-width": "0.2rem",
+          "font-size": "5rem",
+          "line-height": 14,
+          "letter-spacing": -5,
+          "font-family": "Roboto, sans-serif",
+          "font-weight": 900,
+          "font-style": "italic",
+          "text-anchor": "end",
+        });
+
+        var text4 = s.text(193, 225, "/ 3,000");
+        text4.attr({
+          fill: blue_gradient,
+          stroke: "#000",
+          "stroke-width": "0.2rem",
+          "font-size": "5rem",
+          "line-height": 14,
+          "letter-spacing": -5,
+          "font-family": "Roboto, sans-serif",
+          "font-weight": 900,
+          "font-style": "italic",
+        });
+
+        var text3 = s.text(178, 300, "9,999");
+        text3.attr({
+          fill: white_gradient,
+          stroke: "#000",
+          "stroke-width": "0.2rem",
+          "font-size": "5rem",
+          "line-height": 14,
+          "letter-spacing": -5,
+          "font-family": "Roboto, sans-serif",
+          "font-weight": 900,
+          "font-style": "italic",
+          "text-anchor": "end",
+        });
+
+        var text5 = s.text(193, 300, "/ 9,999");
+        text5.attr({
+          fill: white_gradient,
+          stroke: "#000",
+          "stroke-width": "0.2rem",
+          "font-size": "5rem",
+          "line-height": 14,
+          "letter-spacing": -5,
+          "font-family": "Roboto, sans-serif",
+          "font-weight": 900,
+          "font-style": "italic",
+        });
+
+        var hp = 1;
+        var tp = 1;
+
+        setInterval(function () {
+          hp += 50;
+          if (hp >= 9999) hp = 1;
+          tp += 10;
+          if (tp >= 3000) tp = 0;
+          text3.attr({ text: hp });
+          text2.attr({ text: tp });
+
+          var g = white_gradient;
+          var hpp = hp / 9999;
+          if (hpp <= 0.25) g = critical_gradient;
+          else if (hpp <= 0.5) g = low_range_gradient;
+          else if (hpp <= 0.75) g = mid_range_gradient;
+          text3.attr({ fill: g });
+          // text2.animate({ fill: g }, 500);
+        }, 50);
+      });
+    </script>
+  </head>
+  <body style="background-color: #333">
+    <svg id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg"></svg>
+  </body>
+</html>

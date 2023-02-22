@@ -1,0 +1,12 @@
+.player-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  left: 50%;
+  bottom: 20%;
+  position: fixed;
+  transform: translateX(-50%);
+  transform-origin: center;
+}
